@@ -91,9 +91,9 @@ const Index = () => {
             <p className="text-primary font-medium tracking-[0.3em] uppercase text-sm mb-6 animate-fade-up opacity-0" style={{ animationDelay: "100ms", animationFillMode: "forwards" }}>
               Smart Fragrance Automation
             </p>
-            <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-light text-foreground mb-8 leading-[1.1] animate-fade-up opacity-0" style={{ animationDelay: "200ms", animationFillMode: "forwards" }}>
+            <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-normal text-foreground mb-8 leading-[1.1] animate-fade-up opacity-0" style={{ animationDelay: "200ms", animationFillMode: "forwards" }}>
               The Future of Smart
-              <span className="block text-gradient-gold font-medium">Fragrance Experiences</span>
+              <span className="block text-gradient-gold font-semibold">Fragrance Experiences</span>
             </h1>
             <p className="text-muted-foreground text-lg md:text-xl max-w-2xl mx-auto mb-12 leading-relaxed animate-fade-up opacity-0" style={{ animationDelay: "400ms", animationFillMode: "forwards" }}>
               IoT-powered machines delivering automated, contactless perfume experiences
@@ -129,9 +129,9 @@ const Index = () => {
               <p className="text-primary font-medium tracking-[0.2em] uppercase text-sm mb-4">
                 About FRAGO
               </p>
-              <h2 className="font-display text-4xl md:text-5xl font-light text-foreground mb-6 leading-tight">
+              <h2 className="font-display text-4xl md:text-5xl font-normal text-foreground mb-6 leading-tight">
                 Redefining How the World
-                <span className="block text-gradient-gold font-medium">Experiences Scent</span>
+                <span className="block text-gradient-gold font-semibold">Experiences Scent</span>
               </h2>
               <p className="text-muted-foreground text-lg leading-relaxed mb-6">
                 FRAGO is pioneering the future of fragrance discovery through cutting-edge
@@ -169,9 +169,9 @@ const Index = () => {
             <p className="text-primary font-medium tracking-[0.2em] uppercase text-sm mb-4">
               Product Features
             </p>
-            <h2 className="font-display text-4xl md:text-5xl font-light text-foreground mb-6">
+            <h2 className="font-display text-4xl md:text-5xl font-normal text-foreground mb-6">
               Technology Meets
-              <span className="text-gradient-gold font-medium"> Luxury</span>
+              <span className="text-gradient-gold font-semibold"> Luxury</span>
             </h2>
             <p className="text-muted-foreground text-lg">
               Every FRAGO device is engineered for precision, reliability, and unforgettable
@@ -208,9 +208,9 @@ const Index = () => {
             <p className="text-primary font-medium tracking-[0.2em] uppercase text-sm mb-4">
               How It Works
             </p>
-            <h2 className="font-display text-4xl md:text-5xl font-light text-foreground mb-6">
+            <h2 className="font-display text-4xl md:text-5xl font-normal text-foreground mb-6">
               Seamless
-              <span className="text-gradient-gold font-medium"> Experience</span>
+              <span className="text-gradient-gold font-semibold"> Experience</span>
             </h2>
             <p className="text-muted-foreground text-lg">
               From approach to purchase, every interaction is designed for delight.
@@ -265,9 +265,9 @@ const Index = () => {
               <p className="text-primary font-medium tracking-[0.2em] uppercase text-sm mb-4">
                 The Device
               </p>
-              <h2 className="font-display text-4xl md:text-5xl font-light text-foreground mb-6 leading-tight">
+              <h2 className="font-display text-4xl md:text-5xl font-normal text-foreground mb-6 leading-tight">
                 Precision Engineered
-                <span className="block text-gradient-gold font-medium">For Excellence</span>
+                <span className="block text-gradient-gold font-semibold">For Excellence</span>
               </h2>
               <p className="text-muted-foreground text-lg leading-relaxed mb-8">
                 The FRAGO device combines sleek aesthetics with robust engineering.
@@ -300,9 +300,9 @@ const Index = () => {
             <p className="text-primary font-medium tracking-[0.2em] uppercase text-sm mb-4">
               For Brands
             </p>
-            <h2 className="font-display text-4xl md:text-5xl font-light text-foreground mb-6">
+            <h2 className="font-display text-4xl md:text-5xl font-normal text-foreground mb-6">
               Elevate Your
-              <span className="text-gradient-gold font-medium"> Brand Presence</span>
+              <span className="text-gradient-gold font-semibold"> Brand Presence</span>
             </h2>
             <p className="text-muted-foreground text-lg">
               Partner with FRAGO to bring your fragrances to new audiences and spaces.
@@ -344,9 +344,9 @@ const Index = () => {
         <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-primary/10" />
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="font-display text-4xl md:text-6xl font-light text-foreground mb-6">
+            <h2 className="font-display text-4xl md:text-6xl font-normal text-foreground mb-6">
               Ready to Transform
-              <span className="block text-gradient-gold font-medium">Fragrance Retail?</span>
+              <span className="block text-gradient-gold font-semibold">Fragrance Retail?</span>
             </h2>
             <p className="text-muted-foreground text-xl mb-12 max-w-2xl mx-auto">
               Join the future of scent discovery. Partner with FRAGO to bring
