@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { Layout } from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Wifi, Sparkles, Shield, BarChart3, Zap, Globe } from "lucide-react";
+import { ScrollReveal, StaggerContainer, StaggerItem } from "@/components/ScrollReveal";
 import heroImage from "@/assets/hero-fragrance.jpg";
 import fragranceMist from "@/assets/fragrance-mist.jpg";
 import fragoMachine from "@/assets/frago-machine.png";
@@ -125,7 +126,7 @@ const Index = () => {
       <section className="py-32 bg-card">
         <div className="container mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div>
+            <ScrollReveal direction="left">
               <p className="text-primary font-medium tracking-[0.2em] uppercase text-sm mb-4">
                 About FRAGO
               </p>
@@ -148,16 +149,18 @@ const Index = () => {
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
-            </div>
-            <div className="relative">
-              <img
-                src={fragranceMist}
-                alt="Fragrance mist visualization"
-                className="rounded-2xl shadow-elevated"
-              />
-              <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-primary/20 rounded-full blur-3xl" />
-              <div className="absolute -top-6 -right-6 w-24 h-24 bg-primary/30 rounded-full blur-2xl" />
-            </div>
+            </ScrollReveal>
+            <ScrollReveal direction="right" delay={0.2}>
+              <div className="relative">
+                <img
+                  src={fragranceMist}
+                  alt="Fragrance mist visualization"
+                  className="rounded-2xl shadow-elevated"
+                />
+                <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-primary/20 rounded-full blur-3xl" />
+                <div className="absolute -top-6 -right-6 w-24 h-24 bg-primary/30 rounded-full blur-2xl" />
+              </div>
+            </ScrollReveal>
           </div>
         </div>
       </section>
@@ -165,7 +168,7 @@ const Index = () => {
       {/* Features Section */}
       <section className="py-32">
         <div className="container mx-auto px-6">
-          <div className="text-center max-w-3xl mx-auto mb-20">
+          <ScrollReveal className="text-center max-w-3xl mx-auto mb-20">
             <p className="text-primary font-medium tracking-[0.2em] uppercase text-sm mb-4">
               Product Features
             </p>
@@ -177,34 +180,32 @@ const Index = () => {
               Every FRAGO device is engineered for precision, reliability, and unforgettable
               customer experiences.
             </p>
-          </div>
+          </ScrollReveal>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
-              <div
-                key={feature.title}
-                className="group p-8 rounded-2xl bg-card border border-border hover:border-primary/50 transition-all duration-500 hover:shadow-gold"
-                style={{ animationDelay: `${index * 100}ms` }}
-              >
-                <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
-                  <feature.icon className="h-7 w-7 text-primary" />
+          <StaggerContainer className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature) => (
+              <StaggerItem key={feature.title}>
+                <div className="group p-8 rounded-2xl bg-card border border-border hover:border-primary/50 transition-all duration-500 hover:shadow-gold h-full">
+                  <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
+                    <feature.icon className="h-7 w-7 text-primary" />
+                  </div>
+                  <h3 className="font-display text-xl font-medium text-foreground mb-3">
+                    {feature.title}
+                  </h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed">
+                    {feature.description}
+                  </p>
                 </div>
-                <h3 className="font-display text-xl font-medium text-foreground mb-3">
-                  {feature.title}
-                </h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">
-                  {feature.description}
-                </p>
-              </div>
+              </StaggerItem>
             ))}
-          </div>
+          </StaggerContainer>
         </div>
       </section>
 
       {/* How It Works Section */}
       <section className="py-32 bg-card">
         <div className="container mx-auto px-6">
-          <div className="text-center max-w-3xl mx-auto mb-20">
+          <ScrollReveal className="text-center max-w-3xl mx-auto mb-20">
             <p className="text-primary font-medium tracking-[0.2em] uppercase text-sm mb-4">
               How It Works
             </p>
@@ -215,37 +216,39 @@ const Index = () => {
             <p className="text-muted-foreground text-lg">
               From approach to purchase, every interaction is designed for delight.
             </p>
-          </div>
+          </ScrollReveal>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <StaggerContainer className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {steps.map((step, index) => (
-              <div key={step.number} className="relative">
-                <div className="text-8xl font-display font-light text-primary/10 absolute -top-4 left-0">
-                  {step.number}
+              <StaggerItem key={step.number}>
+                <div className="relative">
+                  <div className="text-8xl font-display font-light text-primary/10 absolute -top-4 left-0">
+                    {step.number}
+                  </div>
+                  <div className="pt-16 relative z-10">
+                    <h3 className="font-display text-2xl font-medium text-foreground mb-3">
+                      {step.title}
+                    </h3>
+                    <p className="text-muted-foreground leading-relaxed">
+                      {step.description}
+                    </p>
+                  </div>
+                  {index < steps.length - 1 && (
+                    <div className="hidden lg:block absolute top-1/2 right-0 w-8 h-px bg-border translate-x-4" />
+                  )}
                 </div>
-                <div className="pt-16 relative z-10">
-                  <h3 className="font-display text-2xl font-medium text-foreground mb-3">
-                    {step.title}
-                  </h3>
-                  <p className="text-muted-foreground leading-relaxed">
-                    {step.description}
-                  </p>
-                </div>
-                {index < steps.length - 1 && (
-                  <div className="hidden lg:block absolute top-1/2 right-0 w-8 h-px bg-border translate-x-4" />
-                )}
-              </div>
+              </StaggerItem>
             ))}
-          </div>
+          </StaggerContainer>
 
-          <div className="text-center mt-16">
+          <ScrollReveal delay={0.4} className="text-center mt-16">
             <Button variant="gold" size="lg" asChild>
               <Link to="/how-it-works">
                 See Full Process
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </Button>
-          </div>
+          </ScrollReveal>
         </div>
       </section>
 
@@ -253,15 +256,15 @@ const Index = () => {
       <section className="py-32">
         <div className="container mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div className="order-2 lg:order-1 relative">
+            <ScrollReveal direction="left" className="order-2 lg:order-1 relative">
               <img
                 src={fragoMachine}
                 alt="FRAGO Device"
                 className="rounded-2xl shadow-elevated mx-auto max-h-[500px] object-contain"
               />
               <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-primary/20 rounded-full blur-3xl" />
-            </div>
-            <div className="order-1 lg:order-2">
+            </ScrollReveal>
+            <ScrollReveal direction="right" delay={0.2} className="order-1 lg:order-2">
               <p className="text-primary font-medium tracking-[0.2em] uppercase text-sm mb-4">
                 The Device
               </p>
@@ -288,7 +291,7 @@ const Index = () => {
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
-            </div>
+            </ScrollReveal>
           </div>
         </div>
       </section>
@@ -296,7 +299,7 @@ const Index = () => {
       {/* For Brands Section */}
       <section className="py-32 bg-card">
         <div className="container mx-auto px-6">
-          <div className="text-center max-w-3xl mx-auto mb-20">
+          <ScrollReveal className="text-center max-w-3xl mx-auto mb-20">
             <p className="text-primary font-medium tracking-[0.2em] uppercase text-sm mb-4">
               For Brands
             </p>
@@ -307,35 +310,34 @@ const Index = () => {
             <p className="text-muted-foreground text-lg">
               Partner with FRAGO to bring your fragrances to new audiences and spaces.
             </p>
-          </div>
+          </ScrollReveal>
 
-          <div className="grid md:grid-cols-3 gap-8 mb-12">
+          <StaggerContainer className="grid md:grid-cols-3 gap-8 mb-12">
             {brandBenefits.map((benefit) => (
-              <div
-                key={benefit.title}
-                className="text-center p-8 rounded-2xl bg-background border border-border"
-              >
-                <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto mb-6">
-                  <benefit.icon className="h-8 w-8 text-primary" />
+              <StaggerItem key={benefit.title}>
+                <div className="text-center p-8 rounded-2xl bg-background border border-border h-full">
+                  <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto mb-6">
+                    <benefit.icon className="h-8 w-8 text-primary" />
+                  </div>
+                  <h3 className="font-display text-xl font-medium text-foreground mb-3">
+                    {benefit.title}
+                  </h3>
+                  <p className="text-muted-foreground">
+                    {benefit.description}
+                  </p>
                 </div>
-                <h3 className="font-display text-xl font-medium text-foreground mb-3">
-                  {benefit.title}
-                </h3>
-                <p className="text-muted-foreground">
-                  {benefit.description}
-                </p>
-              </div>
+              </StaggerItem>
             ))}
-          </div>
+          </StaggerContainer>
 
-          <div className="text-center">
+          <ScrollReveal delay={0.3} className="text-center">
             <Button variant="gold" size="lg" asChild>
               <Link to="/for-brands">
                 Explore Partnership
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </Button>
-          </div>
+          </ScrollReveal>
         </div>
       </section>
 
@@ -343,7 +345,7 @@ const Index = () => {
       <section className="py-32 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-primary/10" />
         <div className="container mx-auto px-6 relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
+          <ScrollReveal className="max-w-4xl mx-auto text-center">
             <h2 className="font-display text-4xl md:text-6xl font-normal text-foreground mb-6">
               Ready to Transform
               <span className="block text-gradient-gold font-semibold">Fragrance Retail?</span>
@@ -363,7 +365,7 @@ const Index = () => {
                 <Link to="/for-brands">Learn More</Link>
               </Button>
             </div>
-          </div>
+          </ScrollReveal>
         </div>
       </section>
     </Layout>
