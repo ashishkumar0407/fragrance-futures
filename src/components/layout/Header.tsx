@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
-import fragoLogo from "@/assets/frago-logo.svg";
+import fragoLogo from "@/assets/frago-logo.png";
 
 const navLinks = [
   { href: "/", label: "Home" },

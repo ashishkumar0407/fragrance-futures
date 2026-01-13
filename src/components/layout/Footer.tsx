@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import fragoLogo from "@/assets/frago-logo.svg";
+import fragoLogo from "@/assets/frago-logo.png";
 
 const footerLinks = {
   company: [
