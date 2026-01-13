@@ -4,7 +4,25 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
-import { Mail, Phone, MapPin, Send } from "lucide-react";
+import { Mail, Phone, MapPin, Send, Instagram, Linkedin, Facebook } from "lucide-react";
+
+const socialLinks = [
+  {
+    icon: Instagram,
+    label: "Instagram",
+    href: "https://instagram.com/frago.in",
+  },
+  {
+    icon: Linkedin,
+    label: "LinkedIn",
+    href: "https://linkedin.com/company/frago",
+  },
+  {
+    icon: Facebook,
+    label: "Facebook",
+    href: "https://facebook.com/frago.in",
+  },
+];
 
 const contactInfo = [
   {
@@ -195,6 +213,23 @@ const Contact = () => {
                       <p className="text-foreground font-medium">{info.value}</p>
                     </div>
                   </div>
+                ))}
+              </div>
+
+              {/* Social Media Links */}
+              <div className="flex items-center gap-4 mb-12">
+                <span className="text-muted-foreground text-sm">Follow us:</span>
+                {socialLinks.map((social) => (
+                  <a
+                    key={social.label}
+                    href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors duration-300"
+                    aria-label={social.label}
+                  >
+                    <social.icon className="h-5 w-5" />
+                  </a>
                 ))}
               </div>
 
