@@ -65,9 +65,9 @@ const Contact = () => {
             <p className="text-primary font-medium tracking-[0.3em] uppercase text-sm mb-6">
               Contact Us
             </p>
-            <h1 className="font-display text-5xl md:text-7xl font-light text-foreground mb-8 leading-tight">
-              Let's Start a
-              <span className="block text-gradient-gold font-medium">Conversation</span>
+            <h1 className="font-display text-5xl md:text-7xl text-foreground mb-8 leading-tight">
+              <span className="font-medium">Let's Start a</span>
+              <span className="block text-gradient-gold font-semibold">Conversation</span>
             </h1>
             <p className="text-muted-foreground text-xl max-w-2xl mx-auto leading-relaxed">
               Whether you're a brand looking to partner, a venue interested in
@@ -83,8 +83,8 @@ const Contact = () => {
           <div className="grid lg:grid-cols-2 gap-16">
             {/* Contact Form */}
             <div>
-              <h2 className="font-display text-3xl font-light text-foreground mb-8">
-                Send Us a <span className="text-gradient-gold font-medium">Message</span>
+              <h2 className="font-display text-3xl text-foreground mb-8">
+                <span className="font-medium">Send Us a</span> <span className="text-gradient-gold font-semibold">Message</span>
               </h2>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid sm:grid-cols-2 gap-6">
@@ -179,8 +179,8 @@ const Contact = () => {
 
             {/* Contact Info */}
             <div>
-              <h2 className="font-display text-3xl font-light text-foreground mb-8">
-                Get In <span className="text-gradient-gold font-medium">Touch</span>
+              <h2 className="font-display text-3xl text-foreground mb-8">
+                <span className="font-medium">Get In</span> <span className="text-gradient-gold font-semibold">Touch</span>
               </h2>
               <div className="space-y-8 mb-12">
                 {contactInfo.map((info) => (
