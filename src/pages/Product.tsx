@@ -2,8 +2,7 @@ import { Link } from "react-router-dom";
 import { Layout } from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Check } from "lucide-react";
-import productDevice from "@/assets/product-device.jpg";
-import heroImage from "@/assets/hero-fragrance.jpg";
+import fragoMachine from "@/assets/frago-machine.png";
 
 const specifications = [
   { label: "Dimensions", value: "45cm x 30cm x 25cm" },
@@ -53,9 +52,9 @@ const Product = () => {
             </div>
             <div className="relative">
               <img
-                src={productDevice}
+                src={fragoMachine}
                 alt="FRAGO Smart Dispenser"
-                className="rounded-2xl shadow-elevated mx-auto"
+                className="rounded-2xl shadow-elevated mx-auto max-h-[500px] object-contain"
               />
               <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-primary/20 rounded-full blur-3xl" />
             </div>
@@ -97,9 +96,9 @@ const Product = () => {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="relative">
               <img
-                src={heroImage}
+                src={fragoMachine}
                 alt="FRAGO Device Detail"
-                className="rounded-2xl shadow-elevated"
+                className="rounded-2xl shadow-elevated max-h-[500px] object-contain"
               />
             </div>
             <div>
