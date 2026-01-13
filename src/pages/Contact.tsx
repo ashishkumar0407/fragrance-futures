@@ -20,7 +20,7 @@ const contactInfo = [
   {
     icon: MapPin,
     label: "Location",
-    value: "G62X+WGM, H 17 Rd, Block H, Sangam Vihar, New Delhi, Delhi 110080",
+    value: "INURTURE INCUBATION FOUNDATION ABESEC",
   },
 ];
 
@@ -235,7 +235,7 @@ const Contact = () => {
         <div className="container mx-auto px-6">
           <div className="aspect-[21/9] rounded-2xl overflow-hidden">
             <iframe
-              src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q=Zaxon+frago,+G62X%2BWGM,+H+17+Rd,+Block+H,+Sangam+Vihar,+New+Delhi,+Delhi+110080&zoom=17"
+              src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q=28.63413075632539,77.4462206268277&zoom=17"
               width="100%"
               height="100%"
               style={{ border: 0 }}
