@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import fragoLogo from "@/assets/frago-logo.svg";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -42,9 +43,9 @@ export const Header = () => {
           {/* Logo */}
           <Link
             to="/"
-            className="font-display text-2xl font-semibold tracking-wider text-foreground hover:text-primary transition-colors"
+            className="hover:opacity-80 transition-opacity"
           >
-            FRAGO
+            <img src={fragoLogo} alt="FRAGO" className="h-10 w-auto" />
           </Link>
 
           {/* Desktop Navigation */}

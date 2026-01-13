@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import fragoLogo from "@/assets/frago-logo.svg";
 
 const footerLinks = {
   company: [
@@ -23,11 +24,8 @@ export const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand */}
           <div className="lg:col-span-1">
-            <Link
-              to="/"
-              className="font-display text-2xl font-semibold tracking-wider text-foreground"
-            >
-              FRAGO
+            <Link to="/">
+              <img src={fragoLogo} alt="FRAGO" className="h-10 w-auto" />
             </Link>
             <p className="mt-4 text-muted-foreground text-sm leading-relaxed">
               Pioneering the future of smart fragrance experiences through
