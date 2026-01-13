@@ -45,7 +45,7 @@ export const Header = () => {
             to="/"
             className="hover:opacity-80 transition-opacity"
           >
-            <img src={fragoLogo} alt="FRAGO" className="h-10 w-auto" />
+            <img src={fragoLogo} alt="FRAGO" className="h-14 w-auto" />
           </Link>
 
           {/* Desktop Navigation */}

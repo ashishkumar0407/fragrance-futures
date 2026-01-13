@@ -25,7 +25,7 @@ export const Footer = () => {
           {/* Brand */}
           <div className="lg:col-span-1">
             <Link to="/">
-              <img src={fragoLogo} alt="FRAGO" className="h-10 w-auto" />
+              <img src={fragoLogo} alt="FRAGO" className="h-16 w-auto" />
             </Link>
             <p className="mt-4 text-muted-foreground text-sm leading-relaxed">
               Pioneering the future of smart fragrance experiences through
