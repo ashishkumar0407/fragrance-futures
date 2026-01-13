@@ -10,17 +10,17 @@ const contactInfo = [
   {
     icon: Mail,
     label: "Email",
-    value: "hello@frago.io",
+    value: "contact@frago.in",
   },
   {
     icon: Phone,
     label: "Phone",
-    value: "+1 (555) 123-4567",
+    value: "+91 79052 92308",
   },
   {
     icon: MapPin,
     label: "Location",
-    value: "San Francisco, CA",
+    value: "INURTURE INCUBATION FOUNDATION ABESEC",
   },
 ];
 
