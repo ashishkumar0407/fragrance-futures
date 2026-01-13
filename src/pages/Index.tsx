@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Wifi, Sparkles, Shield, BarChart3, Zap, Globe } from "lucide-react";
 import heroImage from "@/assets/hero-fragrance.jpg";
 import fragranceMist from "@/assets/fragrance-mist.jpg";
-import productDevice from "@/assets/product-device.jpg";
+import fragoMachine from "@/assets/frago-machine.png";
 
 const features = [
   {
@@ -255,9 +255,9 @@ const Index = () => {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="order-2 lg:order-1 relative">
               <img
-                src={productDevice}
+                src={fragoMachine}
                 alt="FRAGO Device"
-                className="rounded-2xl shadow-elevated mx-auto"
+                className="rounded-2xl shadow-elevated mx-auto max-h-[500px] object-contain"
               />
               <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-primary/20 rounded-full blur-3xl" />
             </div>
