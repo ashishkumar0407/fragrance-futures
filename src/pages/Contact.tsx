@@ -4,7 +4,9 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
-import { Mail, Phone, MapPin, Send, Instagram, Linkedin, Facebook } from "lucide-react";
+import { Mail, Phone, MapPin, Send, Instagram, Linkedin, Facebook, MessageCircle } from "lucide-react";
+
+const whatsappNumber = "917905292308"; // Phone number without + or spaces
 
 const socialLinks = [
   {
@@ -215,6 +217,17 @@ const Contact = () => {
                   </div>
                 ))}
               </div>
+
+              {/* WhatsApp Button */}
+              <a
+                href={`https://wa.me/${whatsappNumber}?text=Hi%2C%20I'm%20interested%20in%20FRAGO%20products`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-[#25D366] text-white font-medium hover:bg-[#128C7E] transition-colors duration-300 mb-8"
+              >
+                <MessageCircle className="h-5 w-5" />
+                Chat on WhatsApp
+              </a>
 
               {/* Social Media Links */}
               <div className="flex items-center gap-4 mb-12">
